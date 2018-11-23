@@ -1,32 +1,27 @@
 1.- El primer paso que realizaremos es descargar el Scrip de github y guardar como archivo .sh en el directorio que desees 
-Por ejemplo, puede ser en /home. Abra un terminal de Ubuntu e ingresar al directorio (cd) donde desea guardar el script y luego pegar la siguiente linea
-
-sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/11.0/odoo_install.sh
-
-
+--Por ejemplo, puede ser en /home. Abra un terminal de Ubuntu e ingresar al directorio (cd) donde desea guardar el script y luego pegar la siguiente linea
+  sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/11.0/odoo_install.sh
 2.- Ahora abriremos el archivo y editaremos los parámetros según necesitemos (Ud. Puede trabajar también con nano en lugar de vim.)
-sudo apt-get install nano
-sudo nano odoo_install.sh
-
-
+  sudo apt-get install nano
+  sudo nano odoo_install.sh
 3.- Si desea instalar Odoo Enterprise, Cambie la linea IS_ENTERPRISE a “True”
-
-IS_ENTERPRISE="True"
-Si desea la version Comunity, puede continuar y mantener IS_ENTERPSIE en “False” (que es el que viene por defecto)
-
-IS_ENTERPRISE="False"
-
-
+  IS_ENTERPRISE="True"
+--Si desea la version Comunity, puede continuar y mantener IS_ENTERPSIE en “False” (que es el que viene por defecto)
+  IS_ENTERPRISE="False"
 4.- Hacer que el archivo de instalación de Odoo sea ejecutable
-El siguiente paso es hacer que este archivo sea ejecutable. Para esto copiamos la siguiente linea en el terminal.
-
+--El siguiente paso es hacer que este archivo sea ejecutable. Para esto copiamos la siguiente linea en el terminal.
 sudo chmod +x odoo_install.sh
-
-
 5.- Ejecutar el Script
-Ahora que el codigo es un archivo ejecutable, simplemente lo correremos con el siguiente comando
-
-./odoo_install.sh
-
-Observaciones
+--Ahora que el codigo es un archivo ejecutable, simplemente lo correremos con el siguiente comando
+  ./odoo_install.sh
+### Observaciones
+  Done! The Odoo server is up and running. Specifications:
+  Port: 8069
+  User service: odoo
+  User PostgreSQL: odoo
+  Code location: odoo
+  Addons folder: odoo/odoo-server/addons/
+  Start Odoo service: sudo service odoo-server start
+  Stop Odoo service: sudo service odoo-server stop
+  Restart Odoo service: sudo service odoo-server restart
 
