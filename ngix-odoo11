@@ -1,7 +1,7 @@
 sudo apt-get install nginx
 cd /etc/nginx/sites-available
 git clone https://github.com/vkyc/tecnico/
-cd ngix-para-odoo-erp/
+cd tecnico
 sudo cp /etc/nginx/sites-available/ngix-para-odoo-erp/default.conf /etc/nginx/sites-available/default.conf
 cd ..
 mv default default-temp
