@@ -1,0 +1,14 @@
+### En directorio ODOO
+sudo git clone https://github.com/VKYC/PERSONALIZACION_CH
+### Para verificar
+cd PERSONALIZACION_CH
+----REsultado
+l10n_cl_chart_of_account   l10n_cl_fe             report_xlsx
+l10n_cl_dte_point_of_sale  l10n_cl_stock_picking
+### Copiar directorios a Addons
+
+sudo cp -r l10n_cl_chart_of_account /odoo/odoo-server/addons
+sudo cp -r l10n_cl_dte_point_of_sale /odoo/odoo-server/addons
+sudo cp -r l10n_cl_fe /odoo/odoo-server/addons
+sudo cp -r l10n_cl_stock_picking /odoo/odoo-server/addons
+sudo cp -r report_xlsx /odoo/odoo-server/addons
