@@ -12,3 +12,6 @@ sudo cp -r l10n_cl_dte_point_of_sale /odoo/odoo-server/addons
 sudo cp -r l10n_cl_fe /odoo/odoo-server/addons
 sudo cp -r l10n_cl_stock_picking /odoo/odoo-server/addons
 sudo cp -r report_xlsx /odoo/odoo-server/addons
+
+### Instala librerias, ojo los directorios deben ser cambiados
+pip3 install -r /odoo/custom/localizacion/requirement.txt
