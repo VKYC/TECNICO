@@ -1,0 +1,11 @@
+La configuración es muy sencilla, para ello hay que entrar en la ruta y fichero
+
+/etc/nginx/nginx.conf
+
+Y una vez dentro, solo hay que añadir la línea de configuración de client_max_body_size de la siguiente manera:
+
+client_max_body_size 24000M
+
+Finalmente recargamos el servicio para que tome la nueva configuración de tamaño de fichero:
+service nginx reload
+
