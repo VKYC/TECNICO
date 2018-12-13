@@ -1,6 +1,6 @@
 1. Descargar script:
 
-sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/12.0/odoo12_install.sh
+sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/12.0/odoo_install.sh
 
 2. Modificar los parametros como se indican.
 
