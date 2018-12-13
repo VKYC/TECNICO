@@ -23,3 +23,25 @@ sudo chmod +x odoo_install.sh
 4. Ejecute Scrit:
 
 sudo ./odoo_install.sh
+
+##########  consideraciones
+---- Create custom module directory ----
+---- Setting permissions on home folder ----
+* Create server config file
+* Creating server config file
+* Create startup file
+* Create init file
+* Security Init File
+* Start ODOO on Startup
+* Starting Odoo Service
+Starting odoo-server: odoo-server.
+-----------------------------------------------------------
+Done! The Odoo server is up and running. Specifications:
+Port: 8069
+User service: odoo
+User PostgreSQL: odoo
+Code location: odoo
+Addons folder: odoo/odoo-server/addons/
+Start Odoo service: sudo service odoo-server start
+Stop Odoo service: sudo service odoo-server stop
+Restart Odoo service: sudo service odoo-server restart
