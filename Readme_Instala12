@@ -1,0 +1,20 @@
+1. Descargar script:
+
+sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/12.0/odoo12_install.sh
+
+2. Modificar los parametros como se indican.
+
+OE_USER , usuario de system.
+INSTALL_WKHTMLTOPDF set to False se establece en False si no desea instalar Wkhtmltopdf, si desea instalarlo, debe configurarlo en True.
+OE_PORT es el puerto donde se debe ejecutar Odoo, por ejemplo 8069.
+OE_VERSION  es la versión de Odoo que se instalará, por ejemplo, 12.0 para Odoo V12.
+IS_ENTERPRISE instalará la versión Enterprise sobre la versión 12.0 si la configura en Verdadero, la configura en Falso si desea la versión comunitaria de Odoo 12.
+OE_SUPERADMIN es la contraseña maestra para esta instalación de Odoo.
+
+3. Haga el script ejecutable
+
+sudo chmod +x odoo_install.sh
+
+4. Ejecute Scrit:
+
+sudo ./odoo_install.sh
