@@ -1,0 +1,2 @@
+'Clonar desde repo privado
+git clone https://username:password@github.com/username/repo_name.git 
