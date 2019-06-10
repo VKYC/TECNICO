@@ -1,4 +1,14 @@
 #  Clonar desde repo privado
+
 git clone https://username:password@github.com/username/repo_name.git 
 # Instalar requeriments.txt
 pip install -r requirements.txt
+
+# Configuracion de ODOO-SERVER.conf para localizacion Chile
+[options]
+; This is the password that allows database operations:
+admin_passwd = admin
+xmlrpc_port = 8069
+logfile = /var/log/odoo/odoo-server.log
+addons_path=/odoo/custom/addons/VKYC_LOC_CHILE,/odoo/enterprise/addons,/odoo/odoo-server/addons
+
