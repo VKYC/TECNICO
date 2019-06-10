@@ -1,2 +1,4 @@
 #  Clonar desde repo privado
 git clone https://username:password@github.com/username/repo_name.git 
+# Instalar requeriments.txt
+pip install -r requirements.txt
