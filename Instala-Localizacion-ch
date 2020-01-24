@@ -2,7 +2,7 @@
 cd odoo/custom/addons
 --- Clonamos desde repositotio Ptivado
 --- git clone https://username:password@github.com/username/repo_name.git 
-git clone https://VKYC:oscar110567@github.com/username/VKYC_LOC_CHILE.git 
+git clone https://VKYC:oscar110567@github.com/VKYC/VKYC_LOC_CHILE.git 
 
 
 sudo git clone https://github.com/VKYC/PERSONALIZACION_CH
