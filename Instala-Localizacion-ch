@@ -4,24 +4,12 @@ cd odoo/custom/addons
 --- git clone https://username:password@github.com/username/repo_name.git 
 --- Ojo con los Branch
 git clone https://VKYC:oscar110567@github.com/VKYC/VKYC_LOC_CHILE.git -b 12.0 --single-branch
+git clone https://VKYC:oscar110567@github.com/VKYC/VKYC_LOC_CHILE.git -b 11.0 --single-branch
+git clone https://VKYC:oscar110567@github.com/VKYC/VKYC_LOC_CHILE.git -b master --single-branch
 --- Agregar o modificar en el archivo odoo-server.conf
 sudo nano /etc/odoo-server.conf
 addons_path = /odoo/enterprise/addons,/odoo/odoo-server/addons,/odoo/custom/addons/VKYC_LOC_CHILE
 
+### Instala librerias necesarias
+pip3 install -r /odoo/custom/addons/VKYC_LOC_CHILE/requirement.txt
 
-sudo git clone https://github.com/VKYC/PERSONALIZACION_CH
-### Para verificar
-cd PERSONALIZACION_CH
-----REsultado
-l10n_cl_chart_of_account   l10n_cl_fe             report_xlsx
-l10n_cl_dte_point_of_sale  l10n_cl_stock_picking
-### Copiar directorios a Addons
-
-sudo cp -r l10n_cl_chart_of_account /odoo/odoo-server/addons
-sudo cp -r l10n_cl_dte_point_of_sale /odoo/odoo-server/addons
-sudo cp -r l10n_cl_fe /odoo/odoo-server/addons
-sudo cp -r l10n_cl_stock_picking /odoo/odoo-server/addons
-sudo cp -r report_xlsx /odoo/odoo-server/addons
-
-### Instala librerias, ojo los directorios deben ser cambiados
-pip3 install -r /odoo/custom/localizacion/requirement.txt
