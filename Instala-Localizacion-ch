@@ -1,4 +1,8 @@
 ### En directorio ODOO
+cd odoo/custom/addons
+--- Clonamos desde repositotio Ptivado
+
+
 sudo git clone https://github.com/VKYC/PERSONALIZACION_CH
 ### Para verificar
 cd PERSONALIZACION_CH
