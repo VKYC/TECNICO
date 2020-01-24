@@ -2,7 +2,8 @@
 cd odoo/custom/addons
 --- Clonamos desde repositotio Ptivado
 --- git clone https://username:password@github.com/username/repo_name.git 
-git clone https://VKYC:oscar110567@github.com/VKYC/VKYC_LOC_CHILE.git 
+--- Ojo con los Branch
+git clone https://VKYC:oscar110567@github.com/VKYC/VKYC_LOC_CHILE.git -b
 --- Agregar o modificar en el archivo odoo-server.conf
 sudo nano /etc/odoo-server.conf
 addons_path = /odoo/enterprise/addons,/odoo/odoo-server/addons,/odoo/custom/addons/VKYC_LOC_CHILE
