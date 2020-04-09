@@ -1,0 +1,14 @@
+-- Para Cargar un nuevo proyecto desde desktop
+
+git init
+git add .
+git commit -m "first commit"
+git remote rm origin
+git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git --Nombre real
+git push -u origin master
+-- Necesarias
+
+------ Como configurar Git
+git config user.email "you@example.com"
+git config user.name "Your Name"
+-- Correo y nombre deben ser reales
