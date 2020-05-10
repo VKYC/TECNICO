@@ -4,3 +4,8 @@ Script con varios tipos de verificaciones:
 sudo apt install net-tools
 2.- Ejecuta herramienta
 sudo netstat -plnut
+
+
+################(B)Habilitacion Puerto Ubuntu
+1.- 8069
+sudo ufw allow 8069/tcp
