@@ -1,0 +1,6 @@
+Script con varios tipos de verificaciones:
+################(A)Verificacion de puertos
+1.- Instala herramienta de verificación 
+sudo apt install net-tools
+2.- Ejecuta herramienta
+sudo netstat -plnut
