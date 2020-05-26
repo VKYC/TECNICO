@@ -9,3 +9,13 @@ sudo netstat -plnut
 ################(B)Habilitacion Puerto Ubuntu
 1.- 8069
 sudo ufw allow 8069/tcp
+
+################ verificaciones UFW
+sudo ufw app list
+
+
+############### Instalación de Ngix
+    sudo apt-get update
+    sudo apt-get install nginx
+    -- Habilitacion de la aplicacion en UFW
+    sudo ufw allow 'Nginx HTTP'
