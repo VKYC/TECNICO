@@ -19,3 +19,11 @@ sudo ufw app list
     sudo apt-get install nginx
     -- Habilitacion de la aplicacion en UFW
     sudo ufw allow 'Nginx HTTP'
+    
+############### Verificar estado de servicios
+systemctl status nginx        -- Estado servicio ngix
+sudo systemctl stop nginx     -- parar un servicio
+sudo systemctl start nginx    -- Iniciar un servicio
+sudo systemctl restart nginx  -- Reiniciar un servicio 
+
+
