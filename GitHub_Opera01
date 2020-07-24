@@ -1,14 +1,16 @@
 -- Para Cargar un nuevo proyecto desde desktop
 
-git init
-git add .
-git commit -m "first commit"
-git remote rm origin
-git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git --Nombre real
-git push -u origin master
--- Necesarias
-
------- Como configurar Git
-git config user.email "you@example.com"
-git config user.name "Your Name"
--- Correo y nombre deben ser reales
+** En desktop acceder a la carpeta donde esta el con "git bash", en ella ejecutar lo siguiente:
+1. git init
+2. git config user.name "tu nombre"
+3. git config user.email "tu email@example.com"
+4. git add .
+5. git commit -m "first commit"
+6. git remote add origin https://github.com/tu usuario/proyecto.git 
+    consideraciones:
+    - el nombre del "poryecto" debe ser identico al nombre de la carpeta (proyecto) donde inicio git en desktop
+    - para verificar si el origen remoto esta agregado utilice
+      git remote -v
+    - Para eliminar remoto
+      git remote rm origin
+7. git push --set-upstream origin master
