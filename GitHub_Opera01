@@ -19,4 +19,4 @@ REF TECNICA : https://docs.github.com/en/github/using-git/removing-a-remote
 
 ### Clonando un Repositorio desde un branch especifico
 git clone https://..............         Obs: Con branch por defecto
-
+git clone https://.............. -b branch por defecto
