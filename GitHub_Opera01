@@ -16,3 +16,7 @@ REF TECNICA : https://docs.github.com/en/github/using-git/removing-a-remote
     - Para eliminar remoto
       git remote rm origin
 7. git push --set-upstream origin master
+
+### Clonando un Repositorio desde un branch especifico
+git clone https://..............         Obs: Con branch por defecto
+
