@@ -1,12 +1,12 @@
 ## Se requiete que NGINX y CERBOT previamente instalado
--- Generar Dh (Diffie-Hellman) Grupo
+1   -- Generar Dh (Diffie-Hellman) Grupo
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
--- Mapeo al directorio: well-known/acme-challenge/var/lib/letsencrypt
+2   -- Mapeo al directorio: well-known/acme-challenge/var/lib/letsencrypt
 sudo mkdir -p /var/lib/letsencrypt/.well-known
 sudo chgrp www-data /var/lib/letsencrypt
 sudo chmod g+s /var/lib/letsencrypt
 
--- Creamos un fregmento de codigo, para utilizar en forma posterior de ser necesario, en un archivo .conf
+3   -- Creamos un fregmento de codigo, para utilizar en forma posterior de ser necesario, en un archivo .conf
 sudo nano /etc/nginx/snippets/letsencrypt.conf
 
 :::Fragmento
@@ -18,7 +18,7 @@ location ^~ /.well-known/acme-challenge/ {
 }
 :::
 
--- CReamos un segundo fragmento de codigo en otro .conf
+4    -- CReamos un segundo fragmento de codigo en otro .conf
 
 sudo nano /etc/nginx/snippets/ssl.conf
 
@@ -43,3 +43,28 @@ add_header X-Frame-Options SAMEORIGIN;
 add_header X-Content-Type-Options nosniff;
 
 :::
+###########
+** OJO QUI
+5   --Ahora creamos Nginx Block 
+sudo nano /etc/nginx/sites-available/your_domain.conf
+
+-- Incorporamos el siguiente fragmento de codigo, donde u server debe ser la denominación del actual vps y el dominio crresponder al que direcciona
+
+:::
+
+server {
+  listen 80;
+  server_name your.com www.your_domain.com;
+
+  include snippets/letsencrypt.conf;
+}
+
+:::
+##########
+
+6    -- Ahora creamos un enlace simbolico a la carpeta de sitios
+sudo ln -s /etc/nginx/sites-available/your_domain.conf /etc/nginx/sites-enabled/
+
+7    -- Reiniciamos Nginx
+sudo systemctl restart nginx
+
