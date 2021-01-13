@@ -1,3 +1,5 @@
+## Actualizado para Ubuntu 18.04 y 20.04, ODOO 12,13
+## Procedimiento para istalar y configurar NGINX en vps destino, ocultando el puerto
 sudo apt-get install nginx
 cd /etc/nginx/sites-available
 sudo git clone https://github.com/vkyc/tecnico/
@@ -7,3 +9,7 @@ cd ..
 sudo mv default default-temp
 sudo mv default.conf default
 sudo nginx -s reload
+
+## Instalamos gestor de certificado SSL
+sudo apt update
+sudo apt install certbot
