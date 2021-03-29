@@ -1,0 +1,22 @@
+##Descripcion error
+deploy@server:/etc/nginx/sites-enabled$ sudo systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2017-02-06 17:30:53 EST; 4s ago
+  Process: 7374 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+  Process: 7383 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+  Process: 7380 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+ Main PID: 7384 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─7384 nginx: master process /usr/sbin/nginx -g daemon on; master_process on
+           └─7385 nginx: worker process
+
+Feb 06 17:30:53 server systemd[1]: Starting A high performance web server and a reverse proxy server...
+Feb 06 17:30:53 server systemd[1]: nginx.service: Failed to read PID from file /run/nginx.pid: Invalid argument
+Feb 06 17:30:53 server systemd[1]: Started A high performance web server and a reverse proxy server.
+
+##Correccion
+mkdir /etc/systemd/system/nginx.service.d
+printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
+systemctl daemon-reload
+systemctl restart nginx 
