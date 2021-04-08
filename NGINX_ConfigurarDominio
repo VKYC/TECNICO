@@ -1,3 +1,5 @@
+Ref: https://geekytheory.com/como-configurar-multiples-dominios-y-subdominios-en-nginx
+
 1.- Instalar NGINX
 2.- Crear un directorio para el nuevo host virtual
 
