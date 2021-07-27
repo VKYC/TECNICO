@@ -1,0 +1,2 @@
+make-ssl-cert generate-default-snakeoil --force-overwrite
+****Resuelve problema por desactualizacion de certificado
