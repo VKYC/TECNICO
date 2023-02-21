@@ -20,3 +20,9 @@ REF TECNICA : https://docs.github.com/en/github/using-git/removing-a-remote
 ### Clonando un Repositorio desde un branch especifico
 git clone https://..............         Obs: Con branch por defecto
 git clone https://.............. -b branch por defecto
+
+
+8.- Cuando existe repositorio
+git remote add origin https://github.com/VKYC/om_account_accountant-15.0.6.3.0.git
+git branch -M main
+git push -u origin main
