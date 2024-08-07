@@ -9,6 +9,8 @@ REF TECNICA : https://docs.github.com/en/github/using-git/removing-a-remote
 4. git add .
 5. git commit -m "first commit"
 6. git remote add origin https://github.com/tu usuario/proyecto.git 
+** SOLO PARA REPOSITORIO PRIVADO
+    https://GITHUB_USERNAME:PERSONAL_ACCESS_TOKEN@github.com/GITHUB_USERNAME/REPO_NAME.git
     consideraciones:
     - el nombre del "poryecto" debe ser identico al nombre de la carpeta (proyecto) donde inicio git en desktop
     - para verificar si el origen remoto esta agregado utilice
@@ -16,6 +18,10 @@ REF TECNICA : https://docs.github.com/en/github/using-git/removing-a-remote
     - Para eliminar remoto
       git remote rm origin
 7. git push --set-upstream origin master
+8.- TRABAJANDO EN MAIN
+    git branch -M main
+    git remote add origin <Repositorio>
+    git push -u origin main
 
 ### Clonando un Repositorio desde un branch especifico
 git clone https://..............         Obs: Con branch por defecto
